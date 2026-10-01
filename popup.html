@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blinders</title>
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="mark" aria-hidden="true"></span>blinders</div>
+    <span class="pill" id="on-pill" hidden>on</span>
+  </header>
+
+  <section class="hero" id="idle" hidden>
+    <h1>Focus is off</h1>
+    <p class="sub" id="idle-sub"></p>
+    <div class="durations" role="radiogroup" aria-label="Session length" id="durations"></div>
+    <button class="btn-primary" id="start">Start focus</button>
+  </section>
+
+  <section class="hero" id="active" hidden>
+    <div class="timer" id="timer" aria-live="off">0:00</div>
+    <p class="sub" id="active-sub"></p>
+    <div class="progress" id="progress"><div class="progress-fill" id="progress-fill"></div></div>
+    <button class="hold" id="hold" aria-describedby="hold-hint">
+      <span class="hold-fill" id="hold-fill"></span>
+      <span class="hold-label" id="hold-label">Hold to stop early</span>
+    </button>
+    <p class="visually-hidden" id="hold-hint">Press and hold for 3 seconds to end the session.</p>
+  </section>
+
+  <div class="current" id="current" hidden>
+    <span class="favicon" id="current-icon" aria-hidden="true"></span>
+    <span class="current-host" id="current-host"></span>
+    <button class="link" id="block-current">Block site</button>
+    <span class="current-note" id="current-note" hidden>On your list</span>
+  </div>
+
+  <section class="list-section">
+    <div class="section-head">
+      <h2 class="label" id="list-label">Blocked</h2>
+      <button class="link quiet" id="edit-toggle">Edit as text</button>
+    </div>
+
+    <form class="add" id="add-form" autocomplete="off">
+      <input id="add-input" type="text" placeholder="Add a site, like youtube.com" aria-label="Add a site" spellcheck="false">
+      <kbd aria-hidden="true">↵</kbd>
+    </form>
+    <p class="message" id="message" role="status"></p>
+
+    <ul class="sites" id="sites"></ul>
+    <p class="empty" id="empty" hidden>Your list is empty. Add the sites that pull you away.</p>
+
+    <div class="editor" id="editor" hidden>
+      <textarea id="editor-text" spellcheck="false" aria-label="Blocked sites, one per line"></textarea>
+      <div class="editor-actions">
+        <button class="link quiet" id="editor-copy">Copy list</button>
+        <span class="spacer"></span>
+        <button class="link quiet" id="editor-cancel">Cancel</button>
+        <button class="btn-small" id="editor-save">Save</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <button class="link quiet" id="shortcut"></button>
+    <span id="nudges"></span>
+  </footer>
+
+  <script src="shared.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

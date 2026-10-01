@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Blinders: Block Distracting Sites",
+  "short_name": "Blinders",
+  "version": "2.0.0",
+  "description": "Block distracting sites while you focus. Timed sessions, one-click blocking, no account, and nothing leaves your browser.",
+  "homepage_url": "https://github.com/ameersameerkhan/blinders",
+  "minimum_chrome_version": "116",
+  "permissions": ["declarativeNetRequest", "scripting", "storage", "alarms"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "Blinders",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/off-16.png",
+      "32": "icons/off-32.png"
+    }
+  },
+  "commands": {
+    "start-focus": {
+      "suggested_key": { "default": "Alt+Shift+F" },
+      "description": "Start a focus session"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["blocked.html", "blocked.css", "blocked.js", "shared.js", "theme.css", "fonts/*", "icons/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
