@@ -55,7 +55,7 @@ Blinders adds just enough friction to break that loop. Pick how long you want to
 
 ## Install
 
-**Chrome Web Store:** coming soon.
+**Chrome Web Store:** [Install Blinders](https://chromewebstore.google.com/detail/blinders-block-distractin/efiiidjgnbddbboebkmmncfjlhchmleo)
 
 **From source:**
 1. Download or clone this repo.

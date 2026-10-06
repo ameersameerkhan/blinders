@@ -60,7 +60,7 @@ Read each subreddit's self-promotion rules first. Lead with what the product doe
 ## Launch-day checklist
 
 - [x] Rename the GitHub repo to `blinders`
-- [ ] Store listing approved
-- [ ] Publish, then replace "Coming soon" in the README with the store link
+- [x] Store listing approved
+- [x] Publish, then replace "Coming soon" in the README with the store link
 - [ ] Video on YouTube and linked in the store listing
 - [ ] LinkedIn post with the video, store link in the first comment; X post the same day
